@@ -16,7 +16,7 @@ public class RotateCamera : MonoBehaviour
     void Update()
         
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up,  horizontalInput * rotationSpeed * Time.deltaTime);
+        float mouseInput = Input.GetAxis("MouseAll");
+        transform.Rotate(Vector3.up,  mouseInput * rotationSpeed * Time.deltaTime);
     }
 }
