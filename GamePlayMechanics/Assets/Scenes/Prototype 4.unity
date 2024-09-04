@@ -374,6 +374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   hasPowerup: 0
+  currentPowerup: 0
+  rocketPrefab: {fileID: 2651795722554730489, guid: a0bee1e3587f8b04e93fa9050da0e8bd, type: 3}
   powerupIndicator: {fileID: 1032933107}
 --- !u!1001 &366552066
 PrefabInstance:
@@ -698,6 +700,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23564663788724664, guid: 961be46ca9a355943ae3f65c47741bb0, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23564663788724664, guid: 961be46ca9a355943ae3f65c47741bb0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f2d2ec37191ad48bf8b150724b0214, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 961be46ca9a355943ae3f65c47741bb0, type: 3}
 --- !u!1 &1403545341 stripped
@@ -748,8 +758,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6411b42a24a2f948a95117e8a4fce04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4464000154090525687, guid: c3d062171e5e7764fb63933a11599fe9, type: 3}
-  powerUpPrefab: {fileID: 9126024042247601136, guid: 774f8dae04cba8742a22ab89e7e31623, type: 3}
+  enemyPrefabs:
+  - {fileID: 4464000154090525687, guid: c3d062171e5e7764fb63933a11599fe9, type: 3}
+  - {fileID: 2090846826626897507, guid: 2d2e7b72c5943bb4c849fd7abb643ee6, type: 3}
+  - {fileID: 2262711427724877151, guid: 44644d4f64363f54d8ea9dc84e3808f5, type: 3}
+  powerUpPrefabs:
+  - {fileID: 9126024042247601136, guid: 774f8dae04cba8742a22ab89e7e31623, type: 3}
+  - {fileID: 5195201112259494194, guid: 13d1681cace75a749a562edc6995aead, type: 3}
   enemyCount: 0
   waveNumber: 1
 --- !u!4 &1575231557
