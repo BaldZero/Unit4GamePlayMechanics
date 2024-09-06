@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
 
-    public enum PowerUpType { None, Forceslam, Rockets, Smash}
+    public enum PowerUpType { None, Forceslam, Rockets, Slam}
 
     public PowerUpType powerUpType;
     // Start is called before the first frame update
