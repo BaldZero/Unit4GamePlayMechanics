@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class PlayerControllerX : MonoBehaviour
@@ -33,7 +34,12 @@ public class PlayerControllerX : MonoBehaviour
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
 
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            speed = 1000;
+            speedParticles.Play();
+            StartCoroutine(SpeedBoostCoolDown());
+        }
     }
 
     // If Player collides with powerup, activate powerup
@@ -48,6 +54,12 @@ public class PlayerControllerX : MonoBehaviour
         }
     }
 
+    IEnumerator SpeedBoostCoolDown()
+    {
+        yield return new WaitForSeconds(7);
+        speed = 500;
+        speedParticles.Stop();
+    }
     // Coroutine to count down powerup duration
     IEnumerator PowerupCooldown()
     {
